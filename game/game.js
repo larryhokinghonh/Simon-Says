@@ -83,11 +83,18 @@ function checkAnswer(currentScore) {
 
         $("#enter-username").bind("keypress", function(e) {
             e.stopPropagation();
-        })
+        });
+
+        $("#enter-username").bind("touchstart", function(e) {
+            e.stopPropagation();
+        });
+        $("#submit-button").bind("touchstart", function(e) {
+            e.stopPropagation();
+        });
 
         startOver();
     }
-}
+};
 
 // The program will play an audio when the user selects a button
 function playSound(button) {
