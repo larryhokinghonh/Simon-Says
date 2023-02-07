@@ -3,11 +3,7 @@ body {
   background-color: #011F3F;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:visited {
+a, a:visited {
   color: #FEF2BF;
   text-decoration: none;
 }
@@ -20,18 +16,21 @@ p {
   margin: 0 1% 0.8% 0;
 }
 
-#title {
+#score-title, #restart-title {
   color: #FEF2BF;
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin: 15% auto 5%;
+  margin: 4% auto 4%;
 }
 
-#restart-title, #score-title {
-  color: #FEF2BF;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin: 5%;
+.animation {
+  animation: blinker 1.5s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .header {
@@ -134,11 +133,20 @@ p {
 }
 
 /* Submit Score */
-.submit-score {
-  display: none;
+#enter-username, #enter-userscore {
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 2%;
+  padding: 1%;
+}
+
+#submit-button {
+  background-color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  padding: 1%;
 }
 
 .submit-score {
+  display: none;
   margin: 2%;
 }
 

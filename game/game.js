@@ -15,7 +15,10 @@ volumeSlider.oninput = function() {
 }
 
 // The user needs to press a key to start the game
-$(document).keypress(function() {
+document.addEventListener("keypress", startGame, false);
+document.addEventListener("touchstart", startGame, false);
+
+function startGame() {
     if (!gameStarted) {
         score = 0;
         $("#restart-title").text("");
@@ -24,10 +27,12 @@ $(document).keypress(function() {
         $(".submit-score").css("display", "none");
         $("input")[2].removeAttribute("readonly");
 
+        $("#score-title").removeClass("animation");
+
     nextSequence();
     gameStarted = true;
     }
-});
+};
 
 // This function starts the game and creates the sequence and updates it every time the user gets the sequence correct
 function nextSequence() {
@@ -64,15 +69,17 @@ function checkAnswer(currentScore) {
         $("body").addClass("game-over");
         setTimeout(function() {$("body").toggleClass("game-over");}, 150);
 
-        $("#score-title").css("margin-top", "12%");
+        $("#score-title").css("margin-top", "6%");
         $("#restart-title").css("font-size", "1.5rem");
         $(".submit-score").css("display", "block");
         $(".container").css("display", "none");
 
-        $("#score-title").text("Game Over, Score: " + score);
-        $("#restart-title").text("Press Any Key to Restart");
+        $("#score-title").html(`Game Over! <br><br> Score: ${score}`);
+        $("#restart-title").html("<blink> Press Any Key to Restart </blink>");
         $("input")[2].setAttribute("value", `${score}`);
         $("input")[2].setAttribute("readonly", "");
+
+        $("#score-title").removeClass("animation");
 
         $("#enter-username").bind("keypress", function(e) {
             e.stopPropagation();

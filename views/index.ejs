@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="user-scalable=no"/>
     <title>Simon Says</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./game/images/favicon.ico">
@@ -16,17 +16,19 @@
         <p class="current-volume">25%</p>
     </div>
 
-    <h1 id="score-title">Press A Key to Start</h1>
+    <h1 id="score-title" class="animation">Press A Key to Start</h1>
 
     <div class="submit-score">
         <form method="POST">
             <input type="text" id="enter-username" placeholder="Enter Your Name" name="userName" minlength="1" maxlength="10" required>
             <input type="text" id="enter-userscore" name="userScore" value="5"  size="5" required>
-            <button type="submit" id="submit-button">Submit Score</button>
+            <div>
+                <button type="submit" id="submit-button">Submit Score</button>
+            </div> 
         </form>
     </div>
 
-    <h1 id="restart-title"></h1>
+    <h1 id="restart-title" class="animation"></h1>
 
     <div class="container">
         <div class="row">
