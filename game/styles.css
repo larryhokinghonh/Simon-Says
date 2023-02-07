@@ -1,0 +1,187 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #FEF2BF;
+  text-decoration: none;
+}
+
+/* Header and Title*/
+p {
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin: 0 1% 0.8% 0;
+}
+
+#title {
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 15% auto 5%;
+}
+
+#restart-title, #score-title {
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 5%;
+}
+
+.header {
+  margin-top: 1%;
+  text-align: right;
+}
+
+/* Leaderboard */
+
+#container {
+  height: auto;
+  margin: 0 auto auto;
+  width: 70%;
+}
+
+#leaderboard-title {
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 3% auto 4%;
+}
+
+.search-user {
+  margin-top: 4%;
+}
+
+.leaderboard-column {
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem; 
+}
+
+.top3 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.25rem;
+  margin: 0 1% 0.8% 0;
+}
+
+.outside-top3 {
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  margin: 0 1% 0.8% 0;
+}
+
+.row {
+  position: relative;
+  height: 6%;
+  width: 100%;
+}
+
+.row:nth-child(3) {
+  color: gold;
+}
+
+.row:nth-child(4) {
+  color: silver;
+}
+
+.row:nth-child(5) {
+ color: #CD7F32;
+}
+
+.name {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+}
+
+.score {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+}
+
+/* Volume Slider */
+.volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: grey;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 8px;
+  outline: none;
+  opacity: 0.8;
+  margin: 0 1% 0.5% 0;
+  width: 8%;
+}
+
+.volume-slider:hover {
+  opacity: 1;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  background: #FEF2BF;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+}
+
+/* Submit Score */
+.submit-score {
+  display: none;
+}
+
+.submit-score {
+  margin: 2%;
+}
+
+/* Game Over Screen Effect */
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}

@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Leaderboard</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./game/images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+
+<body>
+    <div class="header">
+        <a href="/"><p>Main Page<p></a>
+        <a href="/leaderboards"><p>Back to Leaderboard</p></a>
+    </div>
+
+    <div id="container">
+        <h1 id="leaderboard-title">User Leaderboard</h1>
+
+        <div class="row">
+            <div class="leaderboard-column name">Player Name</div><div class="leaderboard-column score">Score</div>
+        </div>
+
+        <% var i = 0; %> 
+        <% data.forEach(function(singularData) { %>
+            <% if (i < 3) { %> 
+                <div class="row">
+                    <div class="name"><h6 class="top3"><%= singularData.user_name %></h6></div><div class="score"><h6 class="top3"><%= singularData.user_score %></h6></div>
+                </div>
+            <% } else { %>
+                <div class="row">
+                    <div class="name"><h6 class="outside-top3"><%= singularData.user_name %></h6></div><div class="score"><h6 class="outside-top3"><%= singularData.user_score %></h6></div>
+                </div>
+            <% }; %> 
+            <% i++; %> 
+        <% }) %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./game/images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+
+<body>
+    <div class="header">
+        <a href="/"><p>Main Page</p></a>
+    </div>
+
+    <div class="search-user">
+        <form method="POST">
+            <input type="text" id="enter-username" placeholder="Enter Username" name="userName" minlength="1" maxlength="10" required>
+            <button type="submit" id="submit-button">Search User</button>
+        </form>
+    </div>
+    
+    <div id="container">
+        <h1 id="leaderboard-title">Leaderboard</h1>
+
+        <div class="row">
+            <div class="leaderboard-column name">Player Name</div><div class="leaderboard-column score">Score</div>
+        </div>
+
+        <% var i = 0; %> 
+        <% data.forEach(function(singularData) { %>
+            <% if (i < 3) { %> 
+                <div class="row">
+                    <div class="name"><h6 class="top3"><%= singularData.user_name %></h6></div><div class="score"><h6 class="top3"><%= singularData.user_score %></h6></div>
+                </div>
+            <% } else { %>
+                <div class="row">
+                    <div class="name"><h6 class="outside-top3"><%= singularData.user_name %></h6></div><div class="score"><h6 class="outside-top3"><%= singularData.user_score %></h6></div>
+                </div>
+            <% }; %> 
+            <% i++; %> 
+        <% }) %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Simon Says</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./game/images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+
+<body>
+    <div class="header">
+        <a href="/leaderboards"><p>Leaderboard</p></a>
+        <input class="volume-slider" type="range" min="0" max="100" value="25">
+        <p class="current-volume">25%</p>
+    </div>
+
+    <h1 id="score-title">Press A Key to Start</h1>
+
+    <div class="submit-score">
+        <form method="POST">
+            <input type="text" id="enter-username" placeholder="Enter Your Name" name="userName" minlength="1" maxlength="10" required>
+            <input type="text" id="enter-userscore" name="userScore" value="5"  size="5" required>
+            <button type="submit" id="submit-button">Submit Score</button>
+        </form>
+    </div>
+
+    <h1 id="restart-title"></h1>
+
+    <div class="container">
+        <div class="row">
+            <div type="button" id="green" class="btn green"></div>
+            <div type="button" id="red" class="btn red"></div>
+        </div>
+
+        <div class="row">
+            <div type="button" id="yellow" class="btn yellow"></div>
+            <div type="button" id="blue" class="btn blue"></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./game.js" charset="UTF-8"></script>
+</body>
+
+</html>
