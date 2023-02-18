@@ -113,4 +113,5 @@ function animatePress(currentColour) {
 function startOver() {
     gamePattern.length = 0;
     gameStarted = false;
+    $("button")[0].removeAttribute("disabled");
 }

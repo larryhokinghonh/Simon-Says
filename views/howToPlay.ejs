@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" name="viewport" content="user-scalable=no"/>
-    <title>Simon Says</title>
+    <meta charset="UTF-8">
+    <title>How to Play</title>
     <link rel="stylesheet" href="./styles.css">
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAIK3HADXNIQAywh8ANdAhADLFHwAzxR8AQyDOAMZ5IADHeSAAyHkgACK40gDMfCAAzXwgACG20AAzyCAAILLLAEEgxwA0yyAAIbTOAMx8IQDNfCEAw3cfAMR3HwDFdx8AQyHNACCwyQDQfyEA0X8hAB+sxAAgsswAIbLMAEEgyABCIMgAIK7HADLDHwA1ziEAIbTPADPDHwA/H8MAQB/DADLGHwA20SEAQyHOACCwygA+Hr4AyHogAMl6IADKeiAAQiDJAB+owABAH8QAH6rDADPGIABEIc8AM8kgADTJIAA31CIAIrnTADTMIABCIMoAzX0hAM59IQBAH8UADw0BAEQh0ABCIMsAQyDLADLEHwA1zyEANs8hAMZ4IAAgscoAQR/GACG30gBEIdEAynsgACGzzQDLeyAAPx7BAMx7IABCIMwAIK/IAB+rwwAzxyAAILHLAEEfxwA21SIANMogAB+txgAgrcYAzHshACCvyQBDIM0AH6vEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEAAXlwvPgBAQEBAQEBAQAATGh0yFxhOCgBAQEBAQAALEyITWQkcDVsXAEBAQABZJU1ISFUwCQw+UBsAQEAfAVw6SDoiTkwJHAw9CEAAJRpaVQ4aSkdMDD4MCRYAHlITHVMQWTQuFRcULwxMACIeXCxIWVITTAoUTExQDBVEOAQqOzc7BTFJM0IxMQcRAzgSJBI4KTc8ISs8NjEhAAAkJEYSNzc5GT9LPysxKABAJgIEO1cqJCBDQitDVl1AQAASWA81AyMzJ10zTzwAQEBAAEUqWAZUGSBRMTMAQEBAQEAAOA8qRTMtP0EAQEBAQEBAQEAAOzgZMwBAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
@@ -12,41 +12,18 @@
 <body>
     <div class="header">
         <ul>
+            <li><a href="/"><p>Main Page</p></a></li>
             <li><a href="/leaderboards"><p>Leaderboard</p></a></li>
-            <li><a href="/tutorial"><p>How to Play</p></a></li>
         </ul>
-        <input class="volume-slider" type="range" min="0" max="100" value="25">
-        <p class="current-volume">25%</p>
     </div>
 
-    <h1 id="score-title" class="animation">Press A Key to Start</h1>
-
-    <div class="submit-score">
-        <form method="POST">
-            <input type="text" id="enter-username" placeholder="Enter Your Name" name="userName" minlength="1" maxlength="10" required>
-            <input type="text" id="enter-userscore" name="userScore" value="5"  size="5" required>
-            <div>
-                <button type="submit" id="submit-button" onclick="this.disabled=true;this.form.submit();">Submit Score</button>
-            </div> 
-        </form>
+    <div>
+        <iframe class="tutorial-video" width="75%" height="600" src="https://www.youtube.com/embed/SAL-WHBZ_Tc" allow="fullscreen;" type="video/webm"></iframe>
     </div>
 
-    <h1 id="restart-title" class="animation"></h1>
-
-    <div class="container">
-        <div class="row">
-            <div type="button" id="green" class="btn green"></div>
-            <div type="button" id="red" class="btn red"></div>
-        </div>
-
-        <div class="row">
-            <div type="button" id="yellow" class="btn yellow"></div>
-            <div type="button" id="blue" class="btn blue"></div>
-        </div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="./game.js" charset="UTF-8"></script>
+    <footer>
+        <p>Made By <a class="animation" href="https://www.linkedin.com/in/ho-king-honh-larry-a25665215/">Larry</a></p>
+    </footer>
 </body>
 
 </html>

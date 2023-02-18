@@ -35,6 +35,10 @@ app.post("/leaderboards", async function(req, res) {
     res.render("searchUser", {data});
 }); // User can check their friend's scores
 
+app.get("/tutorial", async function(req, res) {
+    res.render("howToPlay");
+}); // User can watch the tutorial video
+
 app.use( function(err, req, res, next) {
     console.error(err.stack);
     res.status(500).send("Something broke!");

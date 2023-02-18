@@ -13,7 +13,18 @@ p {
   color: #FEF2BF;
   font-family: 'Press Start 2P', cursive;
   font-size: 1rem;
-  margin: 0 1% 0.8% 0;
+  margin: 0 auto auto 0;
+}
+
+ul {
+  margin: 0 0 0.5% 0;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 0 0 2%;
+  padding: 0;
 }
 
 #score-title, #restart-title {
@@ -116,8 +127,8 @@ p {
   height: 8px;
   outline: none;
   opacity: 0.8;
-  margin: 0 1% 0.5% 0;
-  width: 8%;
+  margin: 0 0 0.5% 0;
+  width: 10%;
 }
 
 .volume-slider:hover {
@@ -148,6 +159,12 @@ p {
 .submit-score {
   display: none;
   margin: 2%;
+}
+
+/* Tutorial Video */
+.tutorial-video {
+  border: none;
+  margin: 3% auto 2%;
 }
 
 /* Game Over Screen Effect */

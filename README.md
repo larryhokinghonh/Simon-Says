@@ -13,9 +13,10 @@ The website may take a while to load if the website has not been visited in the 
 
 ## III. Features
 
-- Volume Bar
+- Built-in Volume Bar
 - Live Global Leaderboard
 - Search User Scores
+- **Tutorial Video (New!)**
 
 ## IV. Technologies Used
 
