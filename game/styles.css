@@ -167,6 +167,14 @@ li {
   margin: 3% auto 2%;
 }
 
+footer {
+  bottom: 2%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%; 
+}
+
 /* Game Over Screen Effect */
 .game-over {
   background-color: red;
