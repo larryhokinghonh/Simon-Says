@@ -168,9 +168,6 @@ li {
 }
 
 footer {
-  bottom: 2%;
-  left: 0;
-  position: fixed;
   text-align: center;
   width: 100%; 
 }
